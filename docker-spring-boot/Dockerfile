@@ -21,6 +21,7 @@ RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
 ENV MAVEN_HOME /usr/share/maven
 ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 
+RUN pwd
 RUN mvn -f pom.xml clean install
 
 ADD target/docker-spring-boot.jar docker-spring-boot.jar
