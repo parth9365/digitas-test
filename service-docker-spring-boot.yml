@@ -12,4 +12,4 @@ spec:
     port: 8081
     targetPort: 8081
   selector:
-    app: docker-spring-boot-service
+    app: docker-spring-boot
