@@ -1,0 +1,30 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: docker-spring-boot
+spec:
+  selector:
+    matchLabels:
+      app: docker-spring-boot
+  replicas: 1
+  template:
+    metadata:
+      name: backend
+      labels:
+        app: docker-spring-boot
+        env: development
+    spec:
+      containers:
+      - name: docker-spring-boot
+        image: digitasparth/docker-spring-boot:latest        
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"
+        imagePullPolicy: Always
+        ports:
+        - name: server
+          containerPort: 8080
+        - name: management
+          containerPort: 8081
+      
