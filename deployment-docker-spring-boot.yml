@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: docker-spring-boot
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       name: backend
