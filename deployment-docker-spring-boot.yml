@@ -17,10 +17,10 @@ spec:
       containers:
       - name: docker-spring-boot
         image: digitasparth/docker-spring-boot:latest        
-        resources:
-          limits:
-            memory: "1024Mi"
-            cpu: "500m"
+        # resources:
+        #   limits:
+        #     memory: "1024Mi"
+        #     cpu: "500m"
         imagePullPolicy: Always
         ports:
         - name: server
